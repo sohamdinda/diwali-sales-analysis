@@ -20,15 +20,19 @@ The goal is to turn sales data into actionable business insights and demonstrate
 ## 🛠️ Tech Stack
 
 - **Language:** Python
-- **Data analysis:** Pandas, NumPy
+- **Data Analysis:** Pandas, NumPy
 - **Visualization:** Matplotlib, Seaborn
-- **Machine learning:** Scikit-learn (StandardScaler, K-Means)
+- **Machine Learning:** Scikit-learn (StandardScaler, K-Means)
 - **Environment:** Jupyter Notebook, VS Code
 
 ## 📂 Project Structure
 
 ```text
 Diwali-Sales-Analysis/
+├── images/
+│   ├── sales_by_gender.png
+│   ├── product_category_sales.png
+│   └── customer_segment_comparison.png
 ├── data/  # Local dataset; not included in Git
 ├── Diwali Sales Data Analysis and Customer Segmentation.ipynb
 ├── requirements.txt
@@ -38,12 +42,26 @@ Diwali-Sales-Analysis/
 
 ## 🔍 Analysis Workflow
 
-1. **Data cleaning:** Removed fully empty columns, handled missing `Amount` values, standardized column names, and removed exact duplicate rows.
-2. **Exploratory data analysis:** Examined sales patterns across gender, age group, state, occupation, and product category.
-3. **Feature engineering:** Aggregated transaction records into customer-level spending features.
-4. **Feature scaling:** Standardized numerical features before clustering.
-5. **Customer segmentation:** Evaluated candidate cluster counts using the elbow method and silhouette score.
+1. **Data Cleaning:** Removed fully empty columns, handled missing `Amount` values, standardized column names, and removed exact duplicate rows.
+2. **Exploratory Data Analysis:** Examined sales patterns across gender, age group, state, occupation, and product category.
+3. **Feature Engineering:** Aggregated transaction records into customer-level spending features.
+4. **Feature Scaling:** Standardized numerical features before clustering.
+5. **Customer Segmentation:** Evaluated candidate cluster counts using the elbow method and silhouette score.
 6. **Interpretation:** Compared the resulting customer groups and considered potential business applications.
+
+## 📊 Visualizations
+
+### Sales by Gender
+
+![Sales by Gender](images/sales_by_gender.png)
+
+### Product Category Sales
+
+![Product Category Sales](images/product_category_sales.png)
+
+### Customer Segment Comparison
+
+![Customer Segment Comparison](images/customer_segment_comparison.png)
 
 ## 🤖 Customer Segmentation
 
@@ -77,20 +95,20 @@ These are potential applications of the analysis; their effectiveness would need
 
 ## ⚙️ Setup and Installation
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/sohamdinda/diwali-sales-analysis.git
 cd diwali-sales-analysis
 ```
 
-### 2. Create a virtual environment
+### 2. Create a Virtual Environment
 
 ```bash
 python -m venv .venv
 ```
 
-### 3. Activate the environment
+### 3. Activate the Environment
 
 **Windows PowerShell:**
 
@@ -98,13 +116,13 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
-### 4. Install dependencies
+### 4. Install Dependencies
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-### 5. Add the dataset
+### 5. Add the Dataset
 
 Place the authorized dataset file at:
 
@@ -114,7 +132,7 @@ data/Diwali Sales Data.csv
 
 The dataset is excluded from this repository. Obtain it from an authorized source before running the notebook.
 
-### 6. Run the notebook
+### 6. Run the Notebook
 
 Open `Diwali Sales Data Analysis and Customer Segmentation.ipynb` in VS Code, select the `.venv` Python kernel, and run the cells in order.
 
